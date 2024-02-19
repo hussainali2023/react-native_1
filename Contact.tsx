@@ -1,13 +1,17 @@
-import { SafeAreaView, Text, View } from "react-native"
+import { SafeAreaView, StyleSheet, Text, View } from "react-native"
 
 const Contact = () =>{
     return(
         <SafeAreaView>
             <View>
-                <Text>Contact: 9064198653</Text>
+                <Text>Contact</Text>
             </View>
         </SafeAreaView>
     )
 }
+
+const style = StyleSheet.create({
+    
+})
 
 export default Contact;
