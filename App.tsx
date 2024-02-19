@@ -5,51 +5,29 @@ import {
   SafeAreaView,
   Text,
   StyleSheet,
-  useColorScheme
+  useColorScheme,
+  ScrollView
 } from "react-native"
+import FlatCards from "./components/FlatCards";
 
 const App = (): JSX.Element =>{
-  const isDarkMode = useColorScheme() === "light"
+  // const isDarkMode = useColorScheme() === "dark"
   return (
     <SafeAreaView>
-      <View style={styles.container}>
-        <Text>Hello World!</Text>
-        <Text style={isDarkMode ? styles.blackText : styles.whiteText}>Hello World</Text>
+      <ScrollView>
+      <View >
+        {/* <Text>Hello World!</Text> */}
+        <Text>Hello World</Text>
       </View>
+      <FlatCards/>
+      </ScrollView>
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
  
-  container: {
-    // flex: 1,
-    // alignItems: "center"
-    backgroundColor:"black",
-    height:900
-  },
- 
-  heading: {
-    textAlign:"center",
-    fontSize: 30,
-    fontWeight:"900",
-    marginTop: 20,
-    // color:"red",
-    backgroundColor:"yellow",
-    marginHorizontal:50,
-    padding:20,
-    borderRadius: 20
-  },
-
-  whiteText: {
-    color:"red",
-    backgroundColor:"yellow"
-  },
   
-  blackText: {
-    color: "blue",
-    backgroundColor:"red"
-  }
 
 })
 
